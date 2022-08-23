@@ -1,7 +1,9 @@
+import * as React from "react";
 import type { RouteObject } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Layout from "../layout/index";
-import Ceshi from "../pages/ceshi";
+
+const Layout = React.lazy(() => import("../layout/index"));
+const Ceshi = React.lazy(() => import("../pages/ceshi"));
 
 function NoMatch() {
   return (
