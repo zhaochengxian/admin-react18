@@ -1,0 +1,7 @@
+
+build
+dist
+public
+vite.config.ts
+package.json
+package-lock.json
