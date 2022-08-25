@@ -18,8 +18,12 @@
         "@types/node": "^16.11.52",
         "@types/react": "^18.0.17",
         "@types/react-dom": "^18.0.6",
+        "@typescript-eslint/eslint-plugin": "^5.35.1",
+        "@typescript-eslint/parser": "^5.35.1",
         "@vitejs/plugin-react": "^2.0.1",
         "autoprefixer": "^10.4.8",
+        "eslint": "^8.22.0",
+        "eslint-plugin-react": "^7.31.0",
         "postcss": "^8.4.16",
         "postcss-px-to-viewport": "^1.1.1",
         "sass": "^1.54.5",
@@ -32,7 +36,9 @@
         "pre": "vite --mode pre",
         "local": "vite --mode loc",
         "prod": "tsc && vite prod --mode prod",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "lint": "eslint . --ext js,ts,tsx --cache",
+        "typecheck": "tsc -p src"
     },
     "eslintConfig": {
         "extends": [
