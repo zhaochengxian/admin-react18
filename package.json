@@ -14,7 +14,8 @@
         "lint": "eslint . --ext js,ts,tsx --cache",
         "typecheck": "tsc -p src",
         "prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,html,md}\"",
-        "test": ""
+        "test": "",
+        "lint-staged": "lint-staged"
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -43,6 +44,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.31.0",
         "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
         "postcss": "^8.4.16",
         "postcss-px-to-viewport": "^1.1.1",
         "prettier": "^2.7.1",
@@ -62,5 +64,12 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "lint-staged": {
+        "*.ts": [
+            "prettier --list-different",
+            "eslint"
+        ],
+        "*.md": "prettier --list-different"
     }
 }
