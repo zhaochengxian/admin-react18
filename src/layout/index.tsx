@@ -1,5 +1,7 @@
+import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 
 import Breadcrumbs from './components/breadcrumbs'
 import NavTag from './components/navTag'
@@ -30,7 +32,9 @@ const App = () => (
             <Layout className="layout-outlet">
                 <Breadcrumbs />
                 <Content className="layout-outlet-content">
-                    <Outlet />
+                    <React.Suspense fallback={<LoadingOutlined />}>
+                        <Outlet />
+                    </React.Suspense>
                 </Content>
             </Layout>
         </Layout>

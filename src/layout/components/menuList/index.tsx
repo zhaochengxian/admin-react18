@@ -1,35 +1,26 @@
-import React from 'react'
 import { ReactElement } from 'react'
 import { Menu } from 'antd'
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons'
+import { menuDataSource } from '@/data/menuJson'
+import { useNavigate } from 'react-router-dom'
+import type { MenuProps } from 'antd'
 
-const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
-    const key = String(index + 1)
-    return {
-        key: `sub${key}`,
-        icon: React.createElement(icon),
-        label: `subnav ${key}`,
-        children: new Array(4).fill(null).map((_, j) => {
-            const subKey = index * 4 + j + 1
-            return {
-                key: subKey,
-                label: `option${subKey}`
-            }
-        })
-    }
-})
 const MenuList = (): ReactElement => {
+    const navigate = useNavigate()
+    const onClick: MenuProps['onClick'] = e => {
+        navigate(e?.key)
+    }
     return (
         <div>
             <Menu
                 mode="inline"
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
+                defaultSelectedKeys={['1-1']}
+                defaultOpenKeys={['1']}
                 style={{
                     height: '100%',
                     borderRight: 0
                 }}
-                items={items2}
+                items={menuDataSource}
+                onClick={onClick}
             />
         </div>
     )
