@@ -1,7 +1,9 @@
-
 build
 dist
 public
 vite.config.ts
 package.json
 package-lock.json
+README.md
+type.d.ts
+commitlint.config.js

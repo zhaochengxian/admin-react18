@@ -9,5 +9,9 @@
     "bracketLine": true,
     "jsxBracketSameLine": false,
     "arrowParens": "avoid",
-    "proseWrap": "always"
+    "proseWrap": "always",
+    "files": [
+        "ts",
+        "tsx"
+    ]
 }

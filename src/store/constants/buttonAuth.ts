@@ -1,0 +1,1 @@
+export const GET_BUTTONS_AUTHED = 'GET_BUTTONS_AUTHED'

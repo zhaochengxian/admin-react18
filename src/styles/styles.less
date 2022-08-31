@@ -1,0 +1,21 @@
+@import 'antd/dist/antd.less';
+@import './overrides.less';
+.ant-layout {
+    min-height: 100vh;
+    background-color: #f0f9ff;
+}
+
+.ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title {
+    width: 86%;
+    margin: 0 auto;
+}
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+    border-right: none;
+}
+.ant-menu-item-selected {
+    color: #000000;
+}

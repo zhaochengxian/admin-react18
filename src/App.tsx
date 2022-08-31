@@ -1,9 +1,6 @@
-import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import routes from './router'
-
-import './global.scss'
-//1122334451
+import './styles/styles.less'
 function App() {
     const element = useRoutes(routes)
 

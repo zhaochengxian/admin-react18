@@ -6,8 +6,15 @@ export default ({ mode }) => {
     const env = loadEnv(mode, process.cwd())
     return defineConfig({
         plugins: [
-            react(),
+            react()
         ],
+        css: {
+            preprocessorOptions: {
+                less: {
+                    javascriptEnabled: true,
+                },
+            },
+        },
         server: {
             host: "0.0.0.0",
             // port: 4000,
@@ -17,13 +24,12 @@ export default ({ mode }) => {
                 "/api": {
                     target: env?.VITE_BASE_API, //动态获取不同环境的api,并兼容直接连接后台本地
                     changeOrigin: true,
-                    rewrite: (path) => path.replace(/^\/api/, ""), // 路径重写
+                    rewrite: (path) => path.replace(/^\/api/, ""),
                 },
             },
         },
-
         resolve: {
-            extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.svg'],
+            extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.svg', '.png'],
             alias: {
                 '@': path.resolve(__dirname, '/src'),
                 '@c': path.resolve(__dirname, '/src/components'),
@@ -32,6 +38,7 @@ export default ({ mode }) => {
                 'venn.js': 'venn.js/build/venn.js',
             },
         },
+
     });
 
 }

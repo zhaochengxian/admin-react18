@@ -1,6 +1,7 @@
+import React from 'react'
+import './index.less'
 const Ceshi = () => {
-  console.log("ceshi页面走了");
-  return <div>测试页面</div>;
-};
+    return <div className="ceshi">测试页面</div>
+}
 
-export default Ceshi;
+export default Ceshi
