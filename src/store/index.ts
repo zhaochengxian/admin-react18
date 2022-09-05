@@ -6,10 +6,7 @@ const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 
 const middlewares = [thunkMiddleware]
 
-const enhancer = composeEnhancers(
-    applyMiddleware(...middlewares),
-
-)
+const enhancer = composeEnhancers(applyMiddleware(...middlewares))
 
 export default function configStore() {
     const store = createStore(rootReducer, enhancer)

@@ -1,0 +1,51 @@
+{
+    "msg": "成功",
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "integralType": "OPEN_NOTICE",
+            "name": "打开系统通知",
+            "moveType": 1,
+            "integralConfig": "11",
+            "configMemo": "奖励积分数",
+            "configContentType": "int"
+        },
+        {
+            "id": 2,
+            "integralType": "DAY_SHARE",
+            "name": "每日分享",
+            "moveType": 1,
+            "integralConfig": "20",
+            "configMemo": "每日分享奖励积分数",
+            "configContentType": "int"
+        },
+        {
+            "id": 3,
+            "integralType": "DAY_SIGN",
+            "name": "每日签到",
+            "moveType": 1,
+            "integralConfig": "{\"day1\":10,\"day2\":20,\"day3\":30,\"day4\":40,\"day5\":50,\"day6\":60,\"day7\":70,\"day8\":70}",
+            "configMemo": "连续签到积分奖励配置day1表示第一天，day2表示连续签到第二天，以此类推",
+            "configContentType": "json"
+        },
+        {
+            "id": 4,
+            "integralType": "REGISTER_AGENT",
+            "name": "注册会员",
+            "moveType": 1,
+            "integralConfig": "[{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":1,\"fatherIntegral\":2000,\"agentIntegral\":501},{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":2,\"fatherIntegral\":800,\"agentIntegral\":1.1},{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":3,\"fatherIntegral\":501,\"agentIntegral\":101},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":1,\"fatherIntegral\":3000,\"agentIntegral\":4081},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":2,\"fatherIntegral\":1001,\"agentIntegral\":305},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":3,\"fatherIntegral\":500,\"agentIntegral\":200}]",
+            "configMemo": "注册会员积分奖励分数",
+            "configContentType": "json"
+        },
+        {
+            "id": 5,
+            "integralType": "UPGRADE_AGENT",
+            "name": "升级会员",
+            "moveType": 1,
+            "integralConfig": "[{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":1,\"fatherIntegral\":3000,\"agentIntegral\":3000},{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":2,\"fatherIntegral\":1000,\"agentIntegral\":1000},{\"cwareStoreId\":1,\"storeName\":\"母婴仓\",\"agentLevelId\":3,\"fatherIntegral\":100,\"agentIntegral\":100},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":1,\"fatherIntegral\":3000,\"agentIntegral\":3000},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":2,\"fatherIntegral\":1000,\"agentIntegral\":1000},{\"cwareStoreId\":2,\"storeName\":\"美妆仓\",\"agentLevelId\":3,\"fatherIntegral\":100,\"agentIntegral\":100}]",
+            "configMemo": "会员升级积分奖励分数",
+            "configContentType": "json"
+        }
+    ]
+}
