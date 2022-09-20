@@ -1,6 +1,7 @@
 import * as React from 'react'
 import type { RouteObject } from 'react-router-dom'
 
+const Login = React.lazy(() => import('../pages/login'))
 const Layout = React.lazy(() => import('../layout/index'))
 const Integral = React.lazy(() => import('../pages/integral'))
 const Operate = React.lazy(() => import('../pages/operate'))
@@ -28,6 +29,10 @@ const routes: RouteObject[] = [
             { path: '/monitor', element: <Monitor /> },
             { path: '*', element: <NoMatch /> }
         ]
+    },
+    {
+        path: '/login',
+        element: <Login />
     }
 ]
 
